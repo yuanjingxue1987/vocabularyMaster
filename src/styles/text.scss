@@ -1,0 +1,10 @@
+.tt {
+    color: #f00;
+    .ti {
+        color: #ff0;
+    }
+    opacity: .6;
+    ::placeholder {
+        color: gray;
+    }
+}
