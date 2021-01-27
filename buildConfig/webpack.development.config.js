@@ -14,7 +14,8 @@ module.exports =  env => {
             host: "0.0.0.0",
             clientLogLevel: 'warning',
             port: 10000,
-            hot: true
+            hot: true,
+            historyApiFallback: true
         },
         module: {
             rules: [

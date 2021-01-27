@@ -1,5 +1,15 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import App from './Comoponents/Hello'
+import {Router} from 'react-router-dom'
+import { createBrowserHistory } from "history";
+import CssBaseline from '@material-ui/core/CssBaseline';
+import App from './App'
 
-ReactDOM.render(<App text="yes" />, document.getElementById('root'))
+const customHistory = createBrowserHistory();
+
+ReactDOM.render((
+    <Router history={customHistory}>
+        <CssBaseline />
+        <App />
+    </Router>
+), document.getElementById('app'))
