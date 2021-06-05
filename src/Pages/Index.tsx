@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const FormMain = styled.form`
@@ -13,14 +13,15 @@ export default function PageIndex() {
 
     useEffect(() => {
         document.title = `You clicked ${count} times`;
-      });
+    });
 
-    const submitTrigger = () => {
-        console.log()
+    const submitTrigger = (e: React.SyntheticEvent) => {
+        e.preventDefault()
+        console.log(123)
     }
 
     return (
-        <FormMain action="/test" method="post" onSubmit=submitTrigger>
+        <FormMain action="/test" method="post" onSubmit={submitTrigger}>
             <input type="text" />
             <button>Submit</button>
         </FormMain>
